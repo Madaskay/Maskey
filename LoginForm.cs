@@ -52,7 +52,10 @@ namespace WindowsFormsApp1
                     }
                     if (validUser== false)
                     {
-                        MessageBox.Show("Invalid Credentials. Try again", "Error");
+                        MessageBox.Show("Invalid Credentials. Create new user", "Error");
+                        NewUser form3 = new NewUser();
+                        form3.Show();
+                        this.Hide();
                         return;
                     }
                 }

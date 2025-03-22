@@ -10,17 +10,26 @@ using System.Windows.Forms;
 
 namespace Ujwal_Test
 {
-    public partial class EditSalary : Form
+    public partial class NewUser: Form
     {
-        public EditSalary()
+        public NewUser()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Return_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void NewUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateNew_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
