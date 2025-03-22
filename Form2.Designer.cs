@@ -44,7 +44,7 @@
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(56, 19);
             this.btn1.TabIndex = 0;
-            this.btn1.Text = "button1";
+            this.btn1.Text = "Edit";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -55,7 +55,7 @@
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(56, 19);
             this.btn2.TabIndex = 1;
-            this.btn2.Text = "button2";
+            this.btn2.Text = "Edit";
             this.btn2.UseVisualStyleBackColor = true;
             this.btn2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -66,7 +66,7 @@
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(56, 19);
             this.btn3.TabIndex = 2;
-            this.btn3.Text = "button3";
+            this.btn3.Text = "Edit";
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -77,7 +77,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 19);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "Edit";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -88,7 +88,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 19);
             this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
+            this.button5.Text = "Edit";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -99,7 +99,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(56, 19);
             this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
+            this.button6.Text = "Edit";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -108,9 +108,9 @@
             this.button7.Location = new System.Drawing.Point(321, 310);
             this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(56, 19);
+            this.button7.Size = new System.Drawing.Size(81, 19);
             this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
+            this.button7.Text = "Calculate!";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
