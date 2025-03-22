@@ -54,8 +54,7 @@ namespace WindowsFormsApp1
                     {
                         MessageBox.Show("Invalid Credentials. Create new user", "Error");
                         NewUser form3 = new NewUser();
-                        form3.Show();
-                        this.Hide();
+                        form3.ShowDialog();
                         return;
                     }
                 }
