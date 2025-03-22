@@ -1,6 +1,6 @@
 ﻿namespace Ujwal_Test
 {
-    partial class Form8
+    partial class EditGoal
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // Form8
+            // EditGoal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,8 +68,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form8";
-            this.Text = "Form8";
+            this.Name = "EditGoal";
+            this.Text = "EditGoal";
             this.Load += new System.EventHandler(this.Form8_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

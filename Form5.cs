@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ujwal_Test
 {
-    public partial class Form5 : Form
+    public partial class EditSalarySaved : Form
     {
-        public Form5()
+        public EditSalarySaved()
         {
             InitializeComponent();
         }

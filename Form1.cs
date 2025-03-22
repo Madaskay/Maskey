@@ -14,9 +14,9 @@ using Ujwal_Test;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             if (isValid())
             {
                 MessageBox.Show("your dumb", "idiot");
-                Form2 form2 = new Form2();
+                EditValues form2 = new EditValues();
                 form2.Show();
                 this.Hide();
             }
@@ -58,6 +58,11 @@ namespace WindowsFormsApp1
         {
             textBox1.Clear();
             textBox2.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

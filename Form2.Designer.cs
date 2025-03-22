@@ -1,6 +1,6 @@
 ﻿namespace Ujwal_Test
 {
-    partial class Form2
+    partial class EditValues
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // Form2
+            // EditValues
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,8 +127,8 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "EditValues";
+            this.Text = "EditValues";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 

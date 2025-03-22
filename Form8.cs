@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ujwal_Test
 {
-    public partial class Form8 : Form
+    public partial class EditGoal : Form
     {
-        public Form8()
+        public EditGoal()
         {
             InitializeComponent();
         }

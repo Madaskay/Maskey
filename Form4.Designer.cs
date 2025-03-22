@@ -1,6 +1,6 @@
 ﻿namespace Ujwal_Test
 {
-    partial class Form4
+    partial class EditSavings
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // Form4
+            // EditSavings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,8 +68,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "EditSavings";
+            this.Text = "EditSavings";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

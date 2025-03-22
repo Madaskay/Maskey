@@ -10,46 +10,46 @@ using System.Windows.Forms;
 
 namespace Ujwal_Test
 {
-    public partial class Form2 : Form
+    public partial class EditValues : Form
     {
-        public Form2()
+        public EditValues()
         {
            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            EditAge form3 = new EditAge();
             form3.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            EditSavings form4 = new EditSavings();
             form4.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            EditSalarySaved form5 = new EditSalarySaved();
             form5.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            EditSalary form6 = new EditSalary();
             form6.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
+            EditLife form7 = new EditLife();
             form7.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8();
+            EditGoal form8 = new EditGoal();
             form8.ShowDialog();
         }
 

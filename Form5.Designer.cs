@@ -1,6 +1,6 @@
 ﻿namespace Ujwal_Test
 {
-    partial class Form5
+    partial class EditSalarySaved
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form5
+            // EditSalarySaved
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,8 +67,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form5";
-            this.Text = "Form5";
+            this.Name = "EditSalarySaved";
+            this.Text = "EditSalarySaved";
             this.ResumeLayout(false);
             this.PerformLayout();
 
