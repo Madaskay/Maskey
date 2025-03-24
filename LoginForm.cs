@@ -36,14 +36,14 @@ namespace WindowsFormsApp1
 
                     while (reader.Read())
                     {
-                        //Console.WriteLine(reader["ColumnName"].ToString());
                         string username = reader["username"].ToString();
                         string password = reader["password"].ToString();
+                        GlobalConfig.GlobalLogID= Convert.ToInt32(reader["LOGINID"]);
                         if (username == textBox1.Text && password == textBox2.Text)
                         {
                             validUser = true;
                             MessageBox.Show("Login Successful", "Success");
-                            EditValues form2 = new EditValues();
+                            EditValues1 form2 = new EditValues1();
                             form2.Show();
                             this.Hide();
                             return;
