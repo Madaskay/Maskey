@@ -76,10 +76,5 @@ namespace Ujwal_Test
                 }
             }
         }
-
-        internal void ShowDialouge()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

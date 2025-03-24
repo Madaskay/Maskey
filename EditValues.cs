@@ -52,7 +52,7 @@ namespace Ujwal_Test
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new Form1().ShowDialouge();
+            new Form1().ShowDialog();
         }
 
 
