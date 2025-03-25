@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ujwal_Test
 {
-    public partial class ResultForm : Form
+    public partial class Form3 : Form
     {
         string connString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ARNAVCS\RetirementCalc.mdb;";
         string query = "SELECT age, lifeexpectancy, ageofretirement FROM PERSONAL_INFORMATION where loginid=" + GlobalConfig.GlobalLogID;
@@ -24,17 +25,17 @@ namespace Ujwal_Test
         double ageofretirement;
         double age;
         double lifeexpectancy;
-        public ResultForm()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
             using (OleDbConnection conn = new OleDbConnection(connString))
             {
@@ -60,58 +61,12 @@ namespace Ujwal_Test
                 double totalSavingsAtRetirement = currentsaving + (monthlysalary * (percentageofsaving / 100) * 12 * (ageofretirement - age));
                 double requiredSavings = retirementspendinggoal * 12 * (lifeexpectancy - ageofretirement);
                 bool meetsGoal = totalSavingsAtRetirement >= requiredSavings;
-                if (meetsGoal)
-                {
-                    MessageBox.Show("yes " + totalSavingsAtRetirement + " " + requiredSavings);
-                    label3.Text = totalSavingsAtRetirement.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("no " + totalSavingsAtRetirement + " " + requiredSavings);
-                    label3.Text = totalSavingsAtRetirement.ToString();
-                }
-            }
-        }
 
-        private void MoreDetails_Click(object sender, EventArgs e)
-        {
-            using (OleDbConnection conn = new OleDbConnection(connString))
-            {
-                OleDbCommand cmd = new OleDbCommand(query2, conn);
-                conn.Open();
-                OleDbDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    age = Convert.ToDouble(reader["age"]);
-                    ageofretirement = Convert.ToDouble(reader["ageofretirement"]);
-                    lifeexpectancy = Convert.ToDouble(reader["lifeexpectancy"]);
-                    monthlysalary = Convert.ToDouble(reader["monthlysalary"]);
-                    percentageofsaving = Convert.ToDouble(reader["percentageofsaving"]);
-                    currentsaving = Convert.ToDouble(reader["currentsaving"]);
-                    retirementspendinggoal = Convert.ToDouble(reader["retirementspendinggoal"]);
+                double additionalSavingsNeeded = requiredSavings - totalSavingsAtRetirement;
+                double requiredPercentage = (requiredSavings -currentsaving) / (monthlysalary * 12 * (ageofretirement - age)) * 100;
+                string rec = "increase percentage of salary saved to " + requiredPercentage + "%";
+                label3.Text = rec;
 
-
-                }
-                else
-                {
-                    MessageBox.Show("No data found in PERSONAL_INFORMATION table.");
-                }
-                double totalSavingsAtRetirement = currentsaving + (monthlysalary * (percentageofsaving / 100) * 12 * (ageofretirement - age));
-                double requiredSavings = retirementspendinggoal * 12 * (lifeexpectancy - ageofretirement);
-                bool meetsGoal = totalSavingsAtRetirement >= requiredSavings;
-                if (meetsGoal)
-                {
-                    Form2 form2 = new Form2();
-                    form2.Show();
-                    this.Hide();
-
-                }
-                else
-                {
-                    Form3 form3 = new Form3();
-                    form3.Show();
-                    this.Hide();
-                }
             }
         }
     }
