@@ -106,6 +106,38 @@ namespace Ujwal_Test
             
         }
 
-  
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBox4.Text, out int result))
+            {
+                MessageBox.Show("Please enter a valid number.", "Error");
+                textBox4.Text = "";
+            }
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBox6.Text, out int result))
+            {
+                MessageBox.Show("Please enter a valid number.", "Error");
+                textBox6.Text = "";
+            }
+        }
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBox5.Text, out int result))
+            {
+                MessageBox.Show("Please enter a valid number.", "Error");
+                textBox5.Text = "";
+            }
+        }
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBox7.Text, out int result))
+            {
+                MessageBox.Show("Please enter a valid number.", "Error");
+                textBox7.Text = "";
+            }
+        }
     }
 }
