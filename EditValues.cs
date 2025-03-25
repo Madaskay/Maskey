@@ -52,7 +52,8 @@ namespace Ujwal_Test
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new ResultForm().ShowDialog();
+            new ResultForm().Show();
+            this.Hide();
         }
 
 

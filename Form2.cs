@@ -19,6 +19,7 @@ namespace Ujwal_Test
 
         private void Return_Click(object sender, EventArgs e)
         {
+            new EditValues1().Show();
             this.Close();
         }
     }

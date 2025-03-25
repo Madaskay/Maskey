@@ -32,7 +32,47 @@ namespace Ujwal_Test
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using (OleDbConnection conn = new OleDbConnection(connString))
+            {
+                OleDbCommand cmd = new OleDbCommand(query2, conn);
+                conn.Open();
+                OleDbDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    age = Convert.ToDouble(reader["age"]);
+                    ageofretirement = Convert.ToDouble(reader["ageofretirement"]);
+                    lifeexpectancy = Convert.ToDouble(reader["lifeexpectancy"]);
+                    monthlysalary = Convert.ToDouble(reader["monthlysalary"]);
+                    percentageofsaving = Convert.ToDouble(reader["percentageofsaving"]);
+                    currentsaving = Convert.ToDouble(reader["currentsaving"]);
+                    retirementspendinggoal = Convert.ToDouble(reader["retirementspendinggoal"]);
 
+
+                }
+                else
+                {
+                    MessageBox.Show("No data found in PERSONAL_INFORMATION table.");
+                }
+                double totalSavingsAtRetirement = currentsaving + (monthlysalary * (percentageofsaving / 100) * 12 * (ageofretirement - age));
+                double requiredSavings = retirementspendinggoal * 12 * (lifeexpectancy - ageofretirement);
+                bool meetsGoal = totalSavingsAtRetirement >= requiredSavings;
+
+                double additionalSavingsNeeded = requiredSavings - totalSavingsAtRetirement;
+                double requiredPercentage = (requiredSavings - currentsaving) / (monthlysalary * 12 * (ageofretirement - age)) * 100;
+                string updateQuery = "UPDATE FINANCIAL_INFORMATION SET percentageofsaving = " + requiredPercentage + " WHERE loginid = " + GlobalConfig.GlobalLogID;
+                
+                using (OleDbConnection conn1 = new OleDbConnection(connString))
+                {
+                    OleDbCommand cmd1 = new OleDbCommand(updateQuery, conn1);
+                    conn1.Open();
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Percentage of saving updated to meet retirement goal.");
+                    new EditValues1().Show();
+                    this.Close();
+                }
+
+            }
+            
         }
 
         private void Form3_Load(object sender, EventArgs e)
