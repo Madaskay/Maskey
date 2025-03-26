@@ -62,7 +62,7 @@ namespace Ujwal_Test
                     cmd.Parameters.AddWithValue("@password", password);
                     try
                     {
-                        cmd.ExecuteNonQuery();// executing query to save login information
+                        cmd.ExecuteNonQuery();
                         string loginids = "Select max(loginid) from login_information";
                         using (OleDbCommand cmdID = new OleDbCommand(loginids, conn))
                         {

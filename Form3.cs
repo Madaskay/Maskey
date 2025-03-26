@@ -109,5 +109,11 @@ namespace Ujwal_Test
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new EditValues1().Show();
+            this.Close();
+        }
     }
 }

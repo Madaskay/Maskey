@@ -60,16 +60,7 @@ namespace Ujwal_Test
                 double totalSavingsAtRetirement = currentsaving + (monthlysalary * (percentageofsaving / 100) * 12 * (ageofretirement - age));
                 double requiredSavings = retirementspendinggoal * 12 * (lifeexpectancy - ageofretirement);
                 bool meetsGoal = totalSavingsAtRetirement >= requiredSavings;
-                if (meetsGoal)
-                {
-                    MessageBox.Show("yes " + totalSavingsAtRetirement + " " + requiredSavings);
-                    label3.Text = totalSavingsAtRetirement.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("no " + totalSavingsAtRetirement + " " + requiredSavings);
-                    label3.Text = totalSavingsAtRetirement.ToString();
-                }
+                label3.Text = totalSavingsAtRetirement.ToString();
             }
         }
 
