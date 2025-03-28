@@ -36,12 +36,10 @@ namespace WindowsFormsApp1
 
                     while (reader.Read())
                     {
-                        string username = reader["username"].ToString();
-                        string password = reader["password"].ToString();
-                        GlobalConfig.GlobalLogID= Convert.ToInt32(reader["LOGINID"]);
-                        if (username == textBox1.Text && password == textBox2.Text)
+                        if (reader["username"].ToString() == textBox1.Text && reader["password"].ToString() == textBox2.Text)
                         {
                             validUser = true;
+                            GlobalConfig.GlobalLogID = Convert.ToInt32(reader["LOGINID"]);
                             MessageBox.Show("Login Successful", "Success");
                             EditValues1 form2 = new EditValues1();
                             form2.Show();
